@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add  Student</title>
+</head>
+<body>
+    <h2>Add Student</h2>
+    <form th:object="${student}" th:action="@{/add_student}" method="post">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" th:field="${student.username}" required>
+        </div>
+        <div>
+            <label for="first_name">First name</label>
+            <input type="text" id="first_name" name="first_name" placeholder="First name" th:field="${student.firstName}" required>
+        </div>
+        <div>
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Last name" th:field="${student.lastName}" required>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender" placeholder="Gender" th:field="${student.gender}" required>
+        </div>
+        <div>
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" placeholder="Department" th:field="${student.department}" required>
+        </div>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

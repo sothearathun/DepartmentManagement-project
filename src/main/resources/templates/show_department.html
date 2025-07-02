@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Department</title>
+</head>
+<body>
+    <h2>Department Information Detail</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><strong>ID</strong></td>
+                <td th:text="${department.id}"></td>
+            </tr>
+            <tr>
+                <td><strong>Name</strong></td>
+                <td th:text="${department.name}"></td>
+            </tr>
+            <tr>
+                <td><strong>Head</strong></td>
+                <td th:text="${department.head}"></td>
+            </tr>
+            <tr>
+                <td><strong>Location</strong></td>
+                <td th:text="${department.location}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a th:href="'/department/edit/' + ${department.id}">Edit Department Information</a>
+</body>
+</html>
