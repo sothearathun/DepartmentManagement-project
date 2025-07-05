@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
 <body>
- <h1> this is home html</h1>
+<div class="container">
+    <div class="header">
+        <h1>Department Management System</h1>
+        <p>Manage students and departments efficiently</p>
+    </div>
+
+    <div class="nav-cards">
+        <!-- Students Management Card -->
+        <div class="nav-card">
+            <h2>Students</h2>
+            <p>Manage student information, enrollment, and records</p>
+            <div class="btn-group">
+                <a th:href="@{/all_students}" class="btn btn-primary">View All Students</a>
+                <a th:href="@{/add_student}" class="btn btn-success">Add New Student</a>
+            </div>
+        </div>
+
+        <!-- Departments Management Card -->
+        <div class="nav-card">
+            <h2>Departments</h2>
+            <p>Organize and manage academic departments</p>
+            <div class="btn-group">
+                <a th:href="@{/all_departments}" class="btn btn-info">View All Departments</a>
+                <a th:href="@{/add_department}" class="btn btn-warning">Add New Department</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Department Management System. Built with Spring Boot & Thymeleaf.</p>
+    </div>
+</div>
 </body>
 </html>
